@@ -1,4 +1,4 @@
-# UrbanFit 🏋️‍♀️
+# UrbanFit 
 A simple clothing brand website built using HTML and CSS.
 
 ## Features
