@@ -1,0 +1,265 @@
+/* ==============================
+   🌐 Global Styles
+============================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* ==============================
+   🔝 Navbar
+============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 40px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ff6600;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6600;
+}
+
+/* Hamburger Menu (Mobile) */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ==============================
+   🖼️ Banner Section
+============================== */
+.banner {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.banner img {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.banner img:hover {
+  transform: scale(1.05);
+}
+
+/* ==============================
+   ℹ️ About Section
+============================== */
+.about {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.about h2 {
+  font-size: 32px;
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* ==============================
+   💬 Contact Section
+============================== */
+.contact {
+  text-align: center;
+  background: #f0f0f0;
+  padding: 60px 20px;
+}
+
+.contact h2 {
+  color: #ff6600;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e65c00;
+}
+
+/* ==============================
+   👕 Product Section
+============================== */
+.products {
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.products h2 {
+  color: #ff6600;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Product Grid */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #222;
+}
+
+.product-card p {
+  font-size: 18px;
+  color: #555;
+}
+
+.product-card button {
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #e65c00;
+}
+
+/* ==============================
+   ⚫ Footer
+============================== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
